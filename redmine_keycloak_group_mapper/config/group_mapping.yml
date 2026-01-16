@@ -1,0 +1,23 @@
+keycloak:
+  claim: groups
+
+sync:
+  mode: strict
+
+mappings:
+  AD_REDMINE_DEV:
+    redmine_group: Developers
+    projects:
+      myproject:
+        roles:
+          - Developer
+
+  AD_REDMINE_PM:
+    redmine_group: Project Managers
+    projects:
+      myproject:
+        roles:
+          - Manager
+
+  AD_REDMINE_ADMIN:
+    admin: true
